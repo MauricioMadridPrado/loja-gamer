@@ -9,9 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 // -------------
-
+import { RestritoRoutingModule } from './restrito/restrito-routing.module';
+//---------
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,9 +25,22 @@ import { AtualizaProdutoComponent } from './restrito/atualiza-produto/atualiza-p
 import { CadastroProdutoComponent } from './restrito/cadastro-produto/cadastro-produto.component';
 import { ListaProdutoComponent } from './restrito/lista-produto/lista-produto.component';
 import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, InicioComponent, LoginComponent, MenuComponent, RodapeComponent, RestritoComponent, AtualizaProdutoComponent, CadastroProdutoComponent, ListaProdutoComponent, MenuRestritoComponent],
+  declarations: [
+    AppComponent,
+    InicioComponent,
+    LoginComponent,
+    MenuComponent,
+    RodapeComponent,
+    RestritoComponent,
+    AtualizaProdutoComponent,
+    CadastroProdutoComponent,
+    ListaProdutoComponent,
+    MenuRestritoComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,7 +52,11 @@ import { MenuRestritoComponent } from './restrito/menu-restrito/menu-restrito.co
     MatInputModule,
     MatMenuModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    RestritoRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
